@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+  <header>
+    <h1>See What Everyone Says About Us</h1>
+  </header>
+  <main>
+    <% testi.forEach(element => { %>
+      <li><%= element.desc %> - <strong><%= element.name %></strong></li><br>
+    <% }) %>
+    <p>With our notetaking app, productivity is no longer a struggle—it's a breeze. Say goodbye to scattered thoughts and disorganized ideas. Whether you're jotting down thoughts on the go, brainstorming ideas for a project, or collaborating with colleagues, our app adapts to your needs, helping you stay focused and productive wherever you are. Take control of your productivity and unlock your full potential with our notetaking app.</p>
+  </main>
+</body>
+</html>
