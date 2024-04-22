@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
 </head>
+
 <body>
   <%- include('./partials/nav') %>
-  <header>
-    <h1>Meet our Members!</h1>
-  </header>
-  <main>
-    <ul>
-    <% staffList.forEach(element => { %>
-        <a href="./staff/<%= element.nickname %>"><li> <h3> <%= element.name %> </h3>
-             <strong><%= element.position %></strong>
-            <p>Favorite feature: <%= element.favFeature %> </p>
-        </li></a><br>
-      <% }) %>
-    </ul>
-  </main>
+    <header>
+      <h1>Meet our Members!</h1>
+    </header>
+    <main>
+      <ul>
+        <% staffList.forEach(element=> { %>
+          <a href="./staff/<%= element.nickname %>">
+            <h3><%= element.name %></h3>
+          </a>
+          <li>
+            <strong><%= element.position %></strong>
+            <p>Favorite feature: <%= element.favFeature %></p>
+          </li><br>
+          <% }) %>
+      </ul>
+    </main>
 </body>
+
 </html>
