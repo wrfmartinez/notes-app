@@ -70,6 +70,14 @@ const staffMem = [
   },
 ];
 
+app.get('/sitemap', (req, res) => {
+  res.render('sitemap.ejs');
+})
+
+app.get('/contact', (req, res) => {
+  res.render('contact.ejs');
+})
+
 app.get('/staff/:member', (req, res) => {
   const mem = req.params.member //members are categorized by their nicknames
   let membs = [] // each decalered object property will go here
@@ -77,9 +85,7 @@ app.get('/staff/:member', (req, res) => {
 
     if (mem === "Visionary" && element.nickname === "Visionary") {
       membs.push(element)
-      console.log(element);
     }
-
     if (mem === "TechGenius" && element.nickname === "TechGenius") {
       membs.push(element)
     }
@@ -101,7 +107,6 @@ app.get('/staff/:member', (req, res) => {
   });
 
   res.render('member.ejs', {
-
     name: membs[0].name,
     nickname: membs[0].nickname,
     position: membs[0].position,
@@ -109,8 +114,6 @@ app.get('/staff/:member', (req, res) => {
     bio: membs[0].bio,
   })
 })
-
-
 
 app.get('/staff', (req, res) => {
   res.render('staff.ejs', {
@@ -137,51 +140,3 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000);
-
-// if (mem === "Visionary") {
-//     staffMem.forEach(element => {
-//         membs.push(element)
-
-//     });
-//     }
-//     if (mem === "TechGenius") {
-//         staffMem.forEach(element => {
-//             membs = []
-//             membs.push(element)
-//         });
-//         }
-//     if (mem === "MarketMaestro") {
-//     staffMem.forEach(element => {
-//         membs = []
-//         membs.push(element)
-
-//     });
-//     }
-//     if (mem === "SupportWhiz") {
-//         staffMem.forEach(element => {
-//             membs = []
-//             membs.push(element)
-
-//         });
-//         }
-//         if (mem === "ProdMaster") {
-//             staffMem.forEach(element => {
-//                 membs = []
-//                 membs.push(element)
-
-//             });
-//             }
-//             if (mem === "DesignGuru") {
-//                 staffMem.forEach(element => {
-//                     membs = []
-//                     membs.push(element)
-
-//                 });
-//                 }
-//                 if (mem === "CodeSavvy") {
-//                     staffMem.forEach(element => {
-//                         membs = []
-//                         membs.push(element)
-
-//                     });
-//                     }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+  <form>
+    <label for="first-name">First Name: </label>
+    <input type="text" placeholder="enter your first name" id="first-name" required>
+    <label for="last-name">Last Name: </label>
+    <input type="text" placeholder="enter your last name" id="last-name" required>
+    <label for="email">Email: </label>
+    <input type="email" placeholder="enter your email" id="email" required>
+    <textarea placeholder="message"></textarea>
+    <input type="submit" value="Send!">
+  </form>
+</body>
+</html>
