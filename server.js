@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const about = "At Notes, we're passionate about helping you capture your thoughts, ideas, and inspirations effortlessly. Our mission is to provide intuitive, innovative notetaking solutions that empower individuals and teams to organize, collaborate, and succeed. Whether you're a student, professional, or creative thinker, our tools are designed to adapt to your unique needs, enhancing productivity and creativity along the way. Join us on the journey to unlock the full potential of your notes, and make every moment count with Notes.";
 const us = ["Innovative Technology: We pride ourselves on staying ahead of the curve, leveraging cutting-edge technology to deliver notetaking solutions that are intuitive, efficient, and reliable.", "Customizable Experience: Our platform offers a range of customization options, allowing you to tailor your notetaking experience to suit your specific preferences and workflow.", "Seamless Collaboration: Whether you're working solo or as part of a team, our tools facilitate seamless collaboration, enabling you to share, edit, and brainstorm ideas effortlessly."];
+
 const testimonials = [
   {
     name: "Sarah Johnson",
@@ -16,6 +17,7 @@ const testimonials = [
     desc: `"I've been using Note's notetaking app for both personal and professional purposes, and I couldn't be happier with it. The ability to customize my notes to fit my workflow, coupled with its robust features like tagging and search functionality, has significantly boosted my productivity. It's a must-have tool for anyone looking to streamline their workflow and stay organized."`
   }
 ];
+
 const staffMem = [
     {
       name: "Michael Roberts",
@@ -68,9 +70,49 @@ const staffMem = [
       },
   ];
   app.get('/staff/:member', (req, res) => {
-    res.render('staff.ejs', {
-      staffList: staffMem
+    const mem = req.params.member //members are categorized by their nicknames
+    let membs = [] // each decalered object property will go here 
+    staffMem.forEach(element => {
+        
+        if (mem === "Visionary") {
+                
+                // membs.push(element)
+                console.log(element);
+                
+            } else
+        if (mem === "TechGenius") {
+                
+                // membs.push(element)
+                // console.log();
+                
+            } 
+
+
+
+
+
+
+
+
+    
     });
+                                        
+    
+res.render('member.ejs', {
+    
+            name: membs.name,
+            nickname: membs.nickname,
+            position: membs.position,
+            feature: membs.favFeature,
+            bio: membs.bio,
+          });
+
+
+
+
+
+
+
   })
 
 
@@ -100,3 +142,51 @@ app.get('/', (req, res) => {
 });
 
 app.listen(3000);
+
+// if (mem === "Visionary") {
+//     staffMem.forEach(element => {
+//         membs.push(element)
+        
+//     });
+//     } 
+//     if (mem === "TechGenius") {
+//         staffMem.forEach(element => {
+//             membs = []
+//             membs.push(element)
+//         });
+//         } 
+//     if (mem === "MarketMaestro") {
+//     staffMem.forEach(element => {
+//         membs = []
+//         membs.push(element)
+        
+//     });
+//     } 
+//     if (mem === "SupportWhiz") {
+//         staffMem.forEach(element => {
+//             membs = []
+//             membs.push(element)
+            
+//         });
+//         } 
+//         if (mem === "ProdMaster") {
+//             staffMem.forEach(element => {
+//                 membs = []
+//                 membs.push(element)
+                
+//             });
+//             } 
+//             if (mem === "DesignGuru") {
+//                 staffMem.forEach(element => {
+//                     membs = []
+//                     membs.push(element)
+                    
+//                 });
+//                 } 
+//                 if (mem === "CodeSavvy") {
+//                     staffMem.forEach(element => {
+//                         membs = []
+//                         membs.push(element)
+                        
+//                     });
+//                     } 
