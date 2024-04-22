@@ -7,15 +7,15 @@
 </head>
 <body>
   <%- include('./partials/nav') %>
+  <h1>Contact Us</h1>
+  <p>If you want to contact us submit the form below</p>
   <form>
-    <label for="first-name">First Name: </label>
-    <input type="text" placeholder="enter your first name" id="first-name" required>
-    <label for="last-name">Last Name: </label>
-    <input type="text" placeholder="enter your last name" id="last-name" required>
+    <label for="full-name">Full Name: </label>
+    <input type="text" placeholder="enter your full name" id="full-name" required><br>
     <label for="email">Email: </label>
-    <input type="email" placeholder="enter your email" id="email" required>
-    <textarea placeholder="message"></textarea>
-    <input type="submit" value="Send!">
+    <input type="email" placeholder="enter your email" id="email" required><br>
+    <textarea placeholder="message"></textarea><br>
+    <input type="submit" value="Send">
   </form>
 </body>
 </html>
