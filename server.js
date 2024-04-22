@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+app.use(express.static('public')); //tells express to try to match requests with files in the directory called 'public'
+
+// Attribution: Most of the paragraphs were provided by ChatGPT
+const home = "Welcome to Notes – where your ideas find a home. Whether you're a student, professional, or creative thinker, our note-taking app is your companion in capturing and organizing thoughts seamlessly. With intuitive design and powerful features, Notes empowers you to transform inspiration into action effortlessly. Say hello to a clutter-free mind and hello to productivity. Join us, and let's embark on a journey of creativity, organization, and success together. Welcome to your new favorite note-taking app.";
 const about = "At Notes, we're passionate about helping you capture your thoughts, ideas, and inspirations effortlessly. Our mission is to provide intuitive, innovative notetaking solutions that empower individuals and teams to organize, collaborate, and succeed. Whether you're a student, professional, or creative thinker, our tools are designed to adapt to your unique needs, enhancing productivity and creativity along the way. Join us on the journey to unlock the full potential of your notes, and make every moment count with Notes.";
 const us = ["Innovative Technology: We pride ourselves on staying ahead of the curve, leveraging cutting-edge technology to deliver notetaking solutions that are intuitive, efficient, and reliable.", "Customizable Experience: Our platform offers a range of customization options, allowing you to tailor your notetaking experience to suit your specific preferences and workflow.", "Seamless Collaboration: Whether you're working solo or as part of a team, our tools facilitate seamless collaboration, enabling you to share, edit, and brainstorm ideas effortlessly."];
 
@@ -170,7 +174,9 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('home.ejs', {})
+  res.render('home.ejs', {
+    homeDesc: home
+  })
 });
 
 app.listen(3000);
