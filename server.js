@@ -71,7 +71,41 @@ const staffMem = [
 ];
 
 app.get('/sitemap', (req, res) => {
-  res.render('sitemap.ejs');
+  let links = [] // each decalered object property will go here
+  staffMem.forEach(element => {
+
+    if (element.nickname === "Visionary") {
+      links.push("/staff/Visionary")
+    }
+    if (element.nickname === "TechGenius") {
+      links.push("/staff/TechGenius")
+    }
+    if (element.nickname === "MarketMaestro") {
+      links.push("/staff/MarketMaestro")
+    }
+    if (element.nickname === "SupportWhiz") {
+      links.push("/staff/SupportWhiz")
+    }
+    if (element.nickname === "ProdMaster") {
+      links.push("/staff/ProdMaster")
+    }
+    if (element.nickname === "DesignGuru") {
+      links.push("/staff/DesignGuru")
+    }
+    if (element.nickname === "CodeSavvy") {
+      links.push("/staff/CodeSavvy")
+    }
+  });
+
+  res.render('sitemap.ejs', {
+    michael: links[0],
+    jennifer: links[1],
+    ryan: links[2],
+    alex: links[3],
+    emily: links[4],
+    david: links[5],
+    sarah: links[6],
+  });
 })
 
 app.get('/contact', (req, res) => {
