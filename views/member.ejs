@@ -7,19 +7,15 @@
 </head>
 <body>
     <%- include('./partials/nav') %>
-    <main>
+    <main class="member">
         <img src="<%= profileImage %>" alt="Portrait of staff member">
         <h1><%=name%></h1>
-        <ul>
-            <li>Nickname: <%= nickname %></li>
-            <li>Position: <%= position %></li>
-            <li>Favorite Feature: <%= feature %></li>
+        <ul class="member-desc">
+            <li><span class="member-desc-category">Nickname: </span><%= nickname %></li>
+            <li><span class="member-desc-category">Position: </span><%= position %></li>
+            <li><span class="member-desc-category">Favorite Feature: </span><%= feature %></li>
             <li><%= bio %></li>
         </ul>
     </main>
-
-
-
-
 </body>
 </html>
