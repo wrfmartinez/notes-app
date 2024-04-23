@@ -8,9 +8,10 @@
 <body>
     <%- include('./partials/nav') %>
     <main>
+        <img src="<%= profileImage %>" alt="Portrait of staff member">
         <h1><%=name%></h1>
         <ul>
-            <li>Nickname: <%= nickname %></li> 
+            <li>Nickname: <%= nickname %></li>
             <li>Position: <%= position %></li>
             <li>Favorite Feature: <%= feature %></li>
             <li><%= bio %></li>
@@ -19,6 +20,6 @@
 
 
 
-    
+
 </body>
 </html>
