@@ -212,3 +212,42 @@ main.contact input {
 #submit {
   width: 100px;
 }
+
+/* SITEMAP SECTION */
+main.sitemap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  height: 100dvh;
+  padding: 0 100px;
+  gap: 20px;
+}
+
+main.sitemap h2 {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+main.sitemap div {
+  display: flex;
+  align-items: center;
+}
+
+main.sitemap ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+main.sitemap a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main.sitemap a:hover {
+  opacity: 0.8;
+}
