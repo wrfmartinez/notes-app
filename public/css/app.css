@@ -173,3 +173,42 @@ main.testimonials p {
   width: 200px;
   border-radius: 50%;
 }
+
+/* CONTACT SECTION */
+main.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  color: #fff;
+}
+
+main.contact h1 {
+  font-weight: bold;
+}
+
+main.contact p {
+  font-size: 20px;
+}
+
+main.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main.contact input {
+  width: 100%;
+  padding: 10px;
+}
+
+#message-box {
+  width: 100%;
+  height: 200px;
+}
+
+#submit {
+  width: 100px;
+}
