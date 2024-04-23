@@ -1,13 +1,18 @@
 body {
   background: rgb(185, 191, 201);
-  background: linear-gradient(90deg, rgb(185, 204, 233) 20%, rgba(4, 118, 252, 1) 100%);
+  background: linear-gradient(90deg, rgb(67, 169, 246) 20%, rgba(4, 118, 252, 1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
   background-color: #00000015;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  margin: 10px;
   position: fixed !important;
-  width: 100%;
+  width: 90%;
 }
 
 .navbar-brand img {
