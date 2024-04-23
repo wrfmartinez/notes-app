@@ -3,6 +3,13 @@ body {
   background: linear-gradient(90deg, rgb(185, 204, 233) 20%, rgba(4, 118, 252, 1) 100%);
 }
 
+.navbar {
+  background-color: #00000015;
+  backdrop-filter: blur(10px);
+  position: fixed !important;
+  width: 100%;
+}
+
 .navbar-brand img {
   display: flex;
   justify-self: center;
