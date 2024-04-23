@@ -7,11 +7,12 @@
 </head>
 <body>
   <%- include('./partials/nav') %>
-  <header>
+  <header class="home text-white d-flex flex-column align-items-center justify-content-center">
     <h1>Notes - The App</h1>
+    <img src="pencil.png" alt="A pencil graphic">
+    <p><%= homeDesc %></p>
   </header>
   <main>
-    <p><%= homeDesc %></p>
   </main>
 </body>
 </html>

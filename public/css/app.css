@@ -1,10 +1,31 @@
 body {
   background: rgb(185, 191, 201);
-  background: linear-gradient(90deg, rgba(185, 191, 201, 1) 20%, rgba(4, 118, 252, 1) 100%);
+  background: linear-gradient(90deg, rgb(185, 204, 233) 20%, rgba(4, 118, 252, 1) 100%);
 }
 
 .navbar-brand img {
   display: flex;
   justify-self: center;
   width: 90px;
+}
+
+/* HOME PAGE STYLES */
+header.home {
+  text-align: justify;
+  padding: 100px 432px;
+}
+
+header.home h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+}
+
+header.home img {
+  width: 200px;
+  margin: 30px 0;
+}
+
+header.home p {
+  font-size: 24px;
 }
